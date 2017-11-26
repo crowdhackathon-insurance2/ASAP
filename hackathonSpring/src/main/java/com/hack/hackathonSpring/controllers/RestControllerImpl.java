@@ -53,4 +53,29 @@ public class RestControllerImpl implements RestController {
         }
         return listHashMap;
     }
+
+    @Override
+    public String addBenefit(String username) {
+        return "<!DOCTYPE html>\n" +
+                "<html>\n" +
+                "<head>\n" +
+                "<title>Ποντοι</title>\n" +
+                "<style>\n" +
+                ".center {\n" +
+                "    padding: 70px 0;\n" +
+                "    border: 3px solid green;\n" +
+                "    text-align: center;\n" +
+                "}" +
+                "</style>" +
+                "</head>\n" +
+                "<body>\n" +
+                "\n" +
+                "<div class=\"center\">" +
+                "<center><font size=\"10\"><u>Συνολικη Ποντοι Χρηστη:<br>- "  + username + " -</u></font></center>\n" +
+                "<center><p><font size=\"8\">" + 550 + "<br><br><br>Εκπτωση στα ασφαλιστρα :<br><b>5.50$</b></p></font></center>\n" +
+                "\n" +
+                "</div>" +
+                "</body>\n" +
+                "</html>";
+    }
 }
