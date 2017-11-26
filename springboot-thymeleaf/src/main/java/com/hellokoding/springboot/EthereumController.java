@@ -37,6 +37,7 @@ public class EthereumController {
         Web3j web3 = Web3j.build(new HttpService("http://172.16.176.205:8545"));
         EthGetBalance web3ClientVersion = web3.ethGetBalance(address, DefaultBlockParameter.valueOf("latest")).send();
         String balance = web3ClientVersion.getBalance().toString();
+        //web3.ethGetBlockByNumber(DefaultBlockParameter.valueOf("latest"), true).send().getBlock().getTransactions().get(0);
         model.addAttribute("address", address);
         model.addAttribute("balance", balance);
         return "balance";
